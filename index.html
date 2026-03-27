@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliott CHEVREL| Profil</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="profile-card">
+        
+        <header>
+            <img src="assets/img/maphoto.jpg" alt="Alex Dupont" class="profile-pic">
+            <h1>Hello, I'm Eliott <span class="wave">👋</span></h1>
+        </header>
+
+        <section class="bio">
+            <p>I am a student at IÉSEG School of Management. I am in the first year of the Master in Management (Programme Grande École - PGE)</p>
+        </section>
+
+        <div class="cta-container">
+            <a href="chevrel_eliott.pdf" class="btn-cta" download>
+                Download my CV
+            </a>
+        </div>
+
+        <nav class="links-tree">
+            <a href="https://www.linkedin.com/in/eliott-chevrel-996801381/" target="_blank" class="link-item">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/eliott.21_" target="_blank" class="link-item">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/eliott.chevrel" target="_blank" class="link-item">
+                <i class="fa-brands fa-facebook-f"></i> Facebook
+            </a>
+        </nav>
+
+        <hr class="separator">
+
+        <footer class="contact-section">
+            <h2 class="contact-title">Contact me <i class="fa-solid fa-envelope"></i></h2>
+            <p>I am always open to new collaboration opportunities.</p>
+            
+            <div class="contact-details">
+    <div class="email-wrapper">
+        <a href="mailto:eliott.chevrel@ieseg.fr" class="contact-link" id="userEmail">
+            <i class="fa-solid fa-envelope"></i> eliott.chevrel@ieseg.fr
+        </a>
+        <button class="btn-copy" onclick="copyEmail()" title="Copier l'adresse">
+            <i class="fa-regular fa-copy" id="copyIcon"></i>
+        </button>
+    
+    <a href="tel:+33651827130" class="contact-link">
+        <i class="fa-solid fa-phone"></i> +33 6 51 82 71 30
+    </a>
+</div> 
+
+<script>
+        function copyEmail() {
+            const emailText = document.getElementById('userEmail').innerText.trim();
+            const icon = document.getElementById('copyIcon');
+
+            navigator.clipboard.writeText(emailText).then(() => {
+            
+            }).catch(err => {
+                console.error('Erreur lors de la copie : ', err);
+            });
+        }
+    </script>
+</body>
+</body>
+</html>

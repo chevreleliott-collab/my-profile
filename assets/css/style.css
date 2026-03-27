@@ -1,0 +1,224 @@
+
+:root {
+    --bg-color: #f4f7f6; 
+    --card-color: #ffffff; 
+    --text-color: #333333;
+    --text-muted: #666666;
+    --primary-color: #6c5ce7; 
+    --secondary-color: #2ecc71; 
+    --border-radius: 12px;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+
+.profile-card {
+    background-color: var(--card-color);
+    width: 100%;
+    max-width: 600px; 
+    border-radius: var(--border-radius);
+    padding: 60px; 
+    box-shadow: var(--shadow);
+    text-align: center;
+    
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.profile-pic {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 3px solid #eee;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.wave {
+    display: inline-block;
+    animation: waveHand 2s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes waveHand {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+
+.bio p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: #5b4bc4;
+    transform: translateY(-2px);
+}
+
+
+.links-tree {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.link-item {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.link-item:hover {
+    color: var(--primary-color);
+}
+
+.link-item i {
+    font-size: 1.3rem;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+.separator {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 40px 0; 
+    width: 100%;
+    max-width: 600px;
+}
+
+.card-separator {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 40px; 
+}
+
+
+.contact-title {
+    color: var(--secondary-color); 
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.email-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--secondary-color);
+}
+
+.contact-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.btn-copy {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1rem;
+    padding: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.btn-copy:hover {
+    color: var(--secondary-color); 
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 40px 20px;
+    }
+    .skill-card {
+        padding: 30px 20px;
+    }
+    h1 { font-size: 1.8rem; }
+    .contact-title { font-size: 1.4rem; }
+    .links-tree { gap: 15px; }
+}
